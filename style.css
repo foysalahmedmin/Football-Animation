@@ -1,0 +1,235 @@
+body{
+    background-color: greenyellow;
+}
+.football{
+    width: 1000px;
+    height: 600px;
+    margin: 50px auto;
+    border: 3px solid #fff;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+.cartoon{
+    width: 120px;
+    height: 155px;
+    position: relative;
+    top: 200px;
+    left: 135px;
+    animation: kick 3s ease 1s 2 alternate;
+    animation-play-state: running;
+}
+.cartoon-head{
+    width: 50px;
+    height: 55px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.cartoon-body{
+    width: 20px;
+    height: 60px;
+    background-color: black;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+}
+.cartoon-hand{
+    position: absolute;
+    height: 50px;
+    width: 10px;
+    background-color: black;
+    border-radius: 10px;
+}
+.cartoon-hand.one{
+    transform: rotate(35deg);
+    transform-origin: top;
+    top: 52px;
+    left: 47px;
+}
+.cartoon-hand.tow{
+    transform: rotate(-35deg);
+    transform-origin: top;
+    top: 52px;
+    right: 47px;
+}
+.cartoon-leg{
+    
+    display: inline-block;
+    height: 35px;
+    width: 10px;
+    border-radius: 7px;
+    background-color: black;
+    position: absolute;
+}
+
+.cartoon-leg.one{
+    transform: rotate(35deg);
+    transform-origin: top;
+    top: 99px;
+    left: 51px;
+    animation: legMove 3s ease 1s 2 alternate;
+    animation-play-state: running;
+}
+.cartoon-leg.tow{
+    transform: rotate(-25deg);
+    transform-origin: top;
+    top: 99px;
+    right: 51px;
+}
+
+.cartoon-leg-dwn{
+    display: inline-block;
+    height: 35px;
+    width: 10px;
+    border-radius: 7px;
+    background-color: black;
+    position: absolute;
+}
+
+.cartoon-leg-dwn.one{
+    transform: rotate(103deg);
+    transform-origin: top;
+    top: 126px;
+    left: 36px;
+    animation: legDwnMove 3s ease 1s 2 alternate;
+    animation-play-state: running;
+}
+.cartoon-leg-dwn.tow{
+    transform: rotate(-18deg);
+    transform-origin: top;
+    top: 125px;
+    left: 72px;
+}
+
+@keyframes kick {
+    0%{
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    20%{
+        transform: rotate(20deg);
+        transform-origin: bottom;
+    }
+    100%{
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes legMove{
+    0%{
+        transform: rotate(35deg);
+        transform-origin: top;
+        top: 99px;
+        left: 51px;
+    }
+    100%{
+        transform: rotate(-37deg);
+        transform-origin: top;
+        top: 99px;
+        right: 51px;
+    }
+}
+
+@keyframes legDwnMove{
+    0%{
+        transform: rotate(103deg);
+        transform-origin: top;
+        top: 126px;
+        left: 36px;
+    }
+    100%{
+        transform: rotate(-43deg);
+        transform-origin: top;
+        top: 127px;
+        left: 71px;
+    }
+}
+
+
+.ball{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(0, 140, 255);
+    position: relative;
+    top: 181px;
+    left: 230px;
+    animation: ball 4s ease 3s 2 alternate;
+    animation-play-state: running;
+    z-index: 100;
+}
+
+@keyframes ball{
+    0%{
+        top: 181px;
+        left: 230px;
+    }
+    100%{
+        top: 65px;
+        left: 937px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.dibox {
+    width: 250px;
+    height: 300px;
+    position: relative;
+    background-color: #9bfc09;
+    border: 4px dotted white;
+    float: right;
+    transform: skew(353deg , 180deg);
+    margin-right: -30px;
+}
+
+.dibox .one {
+    width: 6px;
+    height: 87px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(355deg);
+    top: -35px;
+    left: 149px;
+}
+.dibox .tow {
+    width: 5px;
+    height: 188px;
+    border-radius: 5px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(347deg);
+    top: -37px;
+    left: 168px;
+    z-index: 10000 !important;
+}
+
+.dibox .three {
+    width: 9px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(355deg);
+    bottom: 55px;
+    left: 192px;
+}
+
+.green {
+    position: relative;
+    float: right;
+    height: 310px;
+    width: 40px;
+    background: greenyellow;
+    transform: rotate(355deg);
+    margin-right: -247px;
+    margin-top: -5px;
+}
